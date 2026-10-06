@@ -1,0 +1,6230 @@
+/* =========================================================
+   DRIVE N' DWELL SOLUTIONS
+   MASTER WEBSITE STYLESHEET
+   Premium Black & Gold Dealership Design
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================================
+   2. COLORS
+   ========================================================= */
+
+/*
+   Main black: #111
+   Dark black: #0b0b0b
+   Gold: #f5b400
+   Dark gold: #d99d00
+   Light background: #f5f5f5
+*/
+
+
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+
+.site-header {
+    background: #111;
+    color: white;
+    padding: 0 30px;
+    border-bottom: 1px solid #292929;
+}
+
+.header-inner {
+    max-width: 1200px;
+    min-height: 78px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: #fff;
+}
+
+.logo small {
+    margin-top: 6px;
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav a {
+    position: relative;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #f5b400;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 2px;
+    height: 2px;
+    background: #f5b400;
+    transform: scaleX(0);
+    transition: 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* Legacy header support */
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #f5b400;
+}
+
+
+/* =========================================================
+   4. GENERAL BUTTONS
+   ========================================================= */
+
+.button {
+    display: inline-block;
+    background: #f5b400;
+    color: #111;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 1px solid #f5b400;
+}
+
+.button:hover {
+    background: #fff;
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   5. HOMEPAGE HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 500px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("images/Hilux/Hilux01.jpeg") center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 60px 20px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 0 0 18px;
+    font-weight: 800;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .button {
+    min-width: 150px;
+}
+
+
+/* =========================================================
+   6. HOMEPAGE CARS / FEATURED VEHICLES
+   ========================================================= */
+
+#cars {
+    padding: 70px 20px;
+    background: #f5f5f5;
+}
+
+#cars > h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+#cars > p {
+    text-align: center;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.car-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.car-card {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    padding: 16px;
+
+    background: #fff;
+    border-radius: 12px;
+
+    border: 1px solid #e8e8e8;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+.car-image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+
+    background: #eee;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.04);
+}
+
+.car-card h3 {
+    font-size: 22px;
+    color: #111;
+    margin: 20px 5px 8px;
+}
+
+.car-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 5px;
+}
+
+.car-card .car-location {
+    color: #777;
+    font-size: 13px;
+}
+
+.car-card h4 {
+    color: #d99d00;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 18px 5px;
+}
+
+.car-card .car-button {
+    display: block;
+    width: 100%;
+
+    background: #111;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    margin-top: 15px;
+}
+
+.car-card .car-button:hover {
+    background: #f5b400;
+    color: #111;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    background: #f5b400;
+    color: #111;
+
+    padding: 7px 12px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   7. COLLECTION / TRANSITION SECTION
+   ========================================================= */
+
+.collection-transition {
+    padding: 70px 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.collection-transition h2 {
+    font-size: 34px;
+    margin: 0 0 15px;
+}
+
+.collection-transition p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   8. HOMEPAGE CONTACT CTA
+   ========================================================= */
+
+.home-contact-cta {
+    position: relative;
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.76),
+            rgba(0, 0, 0, 0.76)
+        ),
+        url("images/Hilux/Hilux01.jpeg") center/cover no-repeat;
+
+    color: white;
+    text-align: center;
+}
+
+.home-contact-cta-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.home-contact-cta h2 {
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+.home-contact-cta p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   9. TRUST / WHY SECTION
+   ========================================================= */
+
+.why-sk-motors {
+    background: #f8f8f8;
+    padding: 80px 20px;
+}
+
+.why-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.why-label {
+    color: #d99f00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+}
+
+.why-heading h2 {
+    color: #111;
+    font-size: 34px;
+    margin: 0 0 15px;
+}
+
+.why-heading p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.why-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+
+    border: 1px solid #eee;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: #f5b400;
+}
+
+.why-card h3 {
+    color: #111;
+    font-size: 21px;
+    margin: 0 0 10px;
+}
+
+.why-card p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================================
+   10. ABOUT PAGE HERO
+   ========================================================= */
+
+.about-hero {
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        #222;
+
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about-label {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    font-weight: 800;
+}
+
+.about-hero p:not(.about-label) {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   11. ABOUT PAGE - WHO WE ARE
+   ========================================================= */
+
+.about-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.about-section-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+}
+
+.about-section h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    color: #111;
+    margin: 0 0 25px;
+    font-weight: 800;
+}
+
+.about-section p:not(.about-section-label) {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   12. ABOUT PAGE - WHY CHOOSE US
+   ========================================================= */
+
+.why-us {
+    padding: 80px 20px;
+    background: #f7f7f7;
+}
+
+.why-us-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.why-us-heading .about-section-label {
+    margin-bottom: 12px;
+}
+
+.why-us-heading h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    color: #111;
+    margin: 0 0 15px;
+    font-weight: 800;
+}
+
+.why-us-heading p:not(.about-section-label) {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   13. CONTACT PAGE HERO
+   ========================================================= */
+
+.contact-hero {
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        #222;
+
+    color: white;
+}
+
+.contact-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-label {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    font-weight: 800;
+}
+
+.contact-hero p:not(.contact-label) {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   14. CONTACT OPTIONS
+   ========================================================= */
+
+.contact-options {
+    padding: 80px 20px;
+    background: #f7f7f7;
+}
+
+.contact-options-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.contact-section-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+}
+
+.contact-options-heading h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    color: #111;
+    margin: 0 0 15px;
+    font-weight: 800;
+}
+
+.contact-options-heading p:not(.contact-section-label) {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    display: block;
+    width: 100%;
+    min-height: 260px;
+
+    padding: 30px 22px;
+
+    background: #fff;
+    color: #111;
+
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 12px;
+    border: 1px solid #eee;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: #f5b400;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff8df;
+    color: #d99d00;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #111;
+    font-weight: 700;
+}
+
+.contact-card p {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.contact-card-link {
+    color: #d99d00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   15. CARS PAGE HERO
+   ========================================================= */
+
+.cars-page-hero {
+    min-height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("images/Hilux/Hilux01.jpeg") center/cover no-repeat;
+
+    color: white;
+}
+
+.cars-page-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.cars-page-hero .cars-label {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.cars-page-hero h1 {
+    font-size: 48px;
+    margin: 0 0 15px;
+    font-weight: 800;
+}
+
+.cars-page-hero p:not(.cars-label) {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   16. VEHICLE DETAILS - LEGACY
+   ========================================================= */
+
+.vehicle-details {
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+.vehicle-details-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    background: white;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.vehicle-details-image {
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.vehicle-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle-details-info {
+    padding: 40px;
+}
+
+.vehicle-label {
+    display: inline-block;
+
+    color: #b88600;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.vehicle-details-info h2 {
+    font-size: 32px;
+    margin: 5px 0 10px;
+    color: #111;
+}
+
+.vehicle-location {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.vehicle-price {
+    font-size: 26px;
+    color: #d99d00;
+    margin: 15px 0 25px;
+}
+
+.vehicle-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0 25px;
+}
+
+.vehicle-specs div {
+    background: #f5f5f5;
+    padding: 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.vehicle-specs span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.vehicle-specs strong {
+    display: block;
+    font-size: 16px;
+    color: #111;
+}
+
+.vehicle-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.whatsapp-button {
+    display: inline-block;
+
+    background: #25D366;
+    color: white;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    display: inline-block;
+
+    background: #111;
+    color: white;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #f5b400;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.vehicle-description {
+    margin-top: 20px;
+}
+
+.vehicle-description h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.vehicle-description p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.vehicle-thumbnails img.active {
+    border-color: #f5b400;
+    box-shadow: 0 0 0 1px #f5b400;
+}
+
+
+/* =========================================================
+   17. SUBARU PAGE
+   ========================================================= */
+
+.subaru-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    color: #111;
+
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subaru-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.subaru-hero h2 {
+    font-size: 46px;
+    margin: 0 0 10px;
+    color: #111;
+    font-weight: 800;
+}
+
+.subaru-hero p:not(.vehicle-label) {
+    font-size: 17px;
+    color: #555;
+    margin: 0;
+}
+
+.subaru-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* Subaru gallery */
+
+.subaru-gallery {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.subaru-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 430px;
+
+    margin: 0 auto;
+
+    background: #ddd;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.subaru-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.subaru-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+
+    min-height: 70px;
+}
+
+.subaru-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    opacity: 0.85;
+}
+
+.subaru-thumbnails img:hover {
+    transform: translateY(-3px);
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+.subaru-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* Subaru information */
+
+.subaru-information {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.subaru-info-header {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.subaru-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: #fff;
+}
+
+.subaru-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.subaru-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+}
+
+.subaru-price span {
+    display: block;
+
+    font-size: 11px;
+    color: #777;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.subaru-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* Subaru overview */
+
+.subaru-overview {
+    margin-top: 25px;
+    padding: 25px;
+
+    background: #f8f8f8;
+
+    border-radius: 8px;
+}
+
+.subaru-overview h2 {
+    font-size: 20px;
+    color: #111;
+    margin: 0 0 12px;
+}
+
+.subaru-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Subaru specifications */
+
+.subaru-specifications {
+    margin-top: 25px;
+}
+
+.subaru-specifications h2,
+.subaru-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.subaru-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.subaru-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.subaru-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.subaru-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* Subaru features */
+
+.subaru-features {
+    margin-top: 25px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* Subaru actions */
+
+.subaru-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.subaru-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   18. MAZDA CX-5 PAGE
+   ========================================================= */
+
+.mazda-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mazda-hero h2 {
+    font-size: 46px;
+    margin: 0 0 10px;
+    color: #111;
+    font-weight: 800;
+}
+
+.mazda-hero p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+}
+
+.mazda-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* Mazda gallery */
+
+.mazda-gallery {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.mazda-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 430px;
+
+    margin: 0 auto;
+
+    background: #eee;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mazda-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mazda-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+}
+
+.mazda-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    opacity: 0.85;
+}
+
+.mazda-thumbnails img:hover {
+    border-color: #f5b400;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.mazda-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* Mazda information */
+
+.mazda-information {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+.mazda-info-header {
+    position: relative;
+
+    background: #111;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+.mazda-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: white;
+}
+
+.mazda-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.mazda-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+}
+
+.mazda-price span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.mazda-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* Mazda overview */
+
+.mazda-overview {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+}
+
+.mazda-overview h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.mazda-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Mazda specifications */
+
+.mazda-specifications {
+    margin-top: 25px;
+}
+
+.mazda-specifications h2,
+.mazda-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.mazda-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.mazda-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.mazda-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.mazda-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* Mazda features */
+
+.mazda-features {
+    margin-top: 25px;
+}
+
+.mazda-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.mazda-feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* Mazda actions */
+
+.mazda-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.mazda-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   19. TOYOTA SIENTA PAGE
+   ========================================================= */
+
+.sienta-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sienta-hero h2 {
+    font-size: 46px;
+    margin: 0 0 10px;
+    color: #111;
+    font-weight: 800;
+}
+
+.sienta-hero p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+}
+
+.sienta-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* Sienta gallery */
+
+.sienta-gallery {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.sienta-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 430px;
+
+    margin: 0 auto;
+
+    background: #eee;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.sienta-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sienta-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+}
+
+.sienta-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    opacity: 0.85;
+}
+
+.sienta-thumbnails img:hover {
+    border-color: #f5b400;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.sienta-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* Sienta information */
+
+.sienta-information {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    padding: 0 20px;
+}
+
+.sienta-info-header {
+    position: relative;
+
+    background: #111;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+.sienta-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: white;
+}
+
+.sienta-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.sienta-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+}
+
+.sienta-price span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.sienta-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* Sienta overview */
+
+.sienta-overview {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+}
+
+.sienta-overview h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.sienta-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Sienta specifications */
+
+.sienta-specifications {
+    margin-top: 25px;
+}
+
+.sienta-specifications h2,
+.sienta-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.sienta-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.sienta-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.sienta-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sienta-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* Sienta features */
+
+.sienta-features {
+    margin-top: 25px;
+}
+
+.sienta-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.sienta-feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* Sienta actions */
+
+.sienta-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.sienta-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   20. TOYOTA HILUX PAGE
+   ========================================================= */
+
+.hilux-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hilux-hero h2 {
+    font-size: 46px;
+    margin: 0 0 10px;
+    color: #111;
+    font-weight: 800;
+}
+
+.hilux-hero p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+}
+
+.hilux-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* Hilux gallery */
+
+.hilux-gallery {
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+}
+
+.hilux-main-image {
+    width: 100%;
+    height: 320px;
+
+    background: #eee;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hilux-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hilux-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+}
+
+.hilux-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    opacity: 0.85;
+}
+
+.hilux-thumbnails img:hover {
+    border-color: #f5b400;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.hilux-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* Hilux information */
+
+.hilux-information {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+.hilux-info-header {
+    position: relative;
+
+    background: #111;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+.hilux-info-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    top: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(245, 180, 0, 0.08);
+
+    pointer-events: none;
+}
+
+.hilux-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: white;
+}
+
+.hilux-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.hilux-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hilux-price span {
+    display: block;
+
+    font-size: 11px;
+    color: #777;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.hilux-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* Hilux overview */
+
+.hilux-overview {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+}
+
+.hilux-overview h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.hilux-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Hilux specifications */
+
+.hilux-specifications {
+    margin-top: 25px;
+}
+
+.hilux-specifications h2,
+.hilux-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.hilux-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.hilux-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.hilux-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.hilux-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* Hilux features */
+
+.hilux-features {
+    margin-top: 25px;
+}
+
+.hilux-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.hilux-feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* Hilux actions */
+
+.hilux-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.hilux-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   21. TOYOTA PRADO PAGE
+   ========================================================= */
+
+.prado-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prado-hero h2 {
+    font-size: 46px;
+    margin: 0 0 10px;
+    color: #111;
+    font-weight: 800;
+}
+
+.prado-hero p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+}
+
+.prado-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* Prado gallery */
+
+.prado-gallery {
+    max-width: 1000px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+}
+
+.prado-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 520px;
+
+    margin: 0 auto;
+
+    background: #eee;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.prado-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.prado-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+}
+
+.prado-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    opacity: 0.85;
+}
+
+.prado-thumbnails img:hover {
+    border-color: #f5b400;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.prado-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* Prado information */
+
+.prado-information {
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    padding: 0 20px;
+}
+
+.prado-info-header {
+    position: relative;
+
+    background: #111;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+.prado-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: white;
+}
+
+.prado-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.prado-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+}
+
+.prado-price span {
+    display: block;
+
+    font-size: 11px;
+    color: #777;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.prado-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* Prado overview */
+
+.prado-overview {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+}
+
+.prado-overview h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.prado-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Prado specifications */
+
+.prado-specifications {
+    margin-top: 25px;
+}
+
+.prado-specifications h2,
+.prado-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.prado-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.prado-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.prado-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.prado-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* Prado features */
+
+.prado-features {
+    margin-top: 25px;
+}
+
+.prado-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.prado-feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* Prado actions */
+
+.prado-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.prado-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   22. MAZDA CX-3 PAGE
+   ========================================================= */
+
+.cx3-hero {
+    min-height: 280px;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #111;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 45px 20px 30px;
+}
+
+.cx3-hero h2 {
+    font-size: 46px;
+    line-height: 1.1;
+
+    margin: 0 0 10px;
+
+    color: #111;
+
+    font-weight: 800;
+}
+
+.cx3-hero p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+}
+
+.cx3-hero .vehicle-label {
+    color: #d99d00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+/* CX-3 gallery */
+
+.cx3-gallery {
+    max-width: 1000px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+}
+
+.cx3-main-image {
+    width: 100%;
+    max-width: 900px;
+    height: 430px;
+
+    margin: 0 auto;
+
+    background: #eee;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cx3-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cx3-thumbnails {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 10px;
+}
+
+.cx3-thumbnails img {
+    width: 80px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    flex-shrink: 0;
+
+    opacity: 0.85;
+}
+
+.cx3-thumbnails img:hover {
+    border-color: #f5b400;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.cx3-thumbnails img.active {
+    border-color: #f5b400;
+    opacity: 1;
+}
+
+
+/* CX-3 information */
+
+.cx3-information {
+    max-width: 950px;
+
+    margin: 0 auto 50px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.cx3-info-header {
+    background: #111;
+
+    color: #fff;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.cx3-info-header h2 {
+    font-size: 28px;
+    margin: 6px 0;
+    color: white;
+}
+
+.cx3-info-header .vehicle-label {
+    color: #f5b400;
+}
+
+.cx3-price {
+    text-align: right;
+
+    padding: 10px 18px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+
+    border-right: 3px solid #f5b400;
+
+    white-space: nowrap;
+}
+
+.cx3-price span {
+    display: block;
+
+    font-size: 11px;
+    color: #777;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.cx3-price strong {
+    font-size: 24px;
+    color: #d99d00;
+    font-weight: 800;
+}
+
+
+/* CX-3 overview */
+
+.cx3-overview {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: #f8f8f8;
+
+    border-radius: 8px;
+}
+
+.cx3-overview h2 {
+    font-size: 20px;
+    color: #111;
+    margin: 0 0 12px;
+}
+
+.cx3-overview p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* CX-3 specifications */
+
+.cx3-specifications {
+    margin-top: 25px;
+}
+
+.cx3-specifications h2,
+.cx3-features h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.cx3-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cx3-spec-grid div {
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.cx3-spec-grid span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.cx3-spec-grid strong {
+    font-size: 14px;
+    color: #111;
+}
+
+
+/* CX-3 features */
+
+.cx3-features {
+    margin-top: 25px;
+}
+
+.cx3-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.cx3-feature-list div {
+    background: #f8f8f8;
+    padding: 11px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* CX-3 actions */
+
+.cx3-actions {
+    max-width: 950px;
+
+    margin: 35px auto 55px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.cx3-actions a {
+    min-width: 190px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   23. LEGACY HARRIER DETAILS
+   ========================================================= */
+
+#harrier-details {
+    padding: 60px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+#harrier-details h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+#harrier-details p {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+#harrier-details .car-button {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   24. LEGACY CONTACT SECTION
+   ========================================================= */
+
+#contact {
+    padding: 60px 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#contact .car-button {
+    background: #f5b400;
+    color: #111;
+}
+
+#contact .car-button:hover {
+    background: white;
+}
+
+
+/* =========================================================
+   25. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #0b0b0b;
+    color: white;
+    padding: 60px 20px 0;
+}
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+.footer-column h3 {
+    color: #fff;
+    margin: 0 0 18px;
+    font-size: 17px;
+}
+
+.footer-column p {
+    color: #999;
+    line-height: 1.7;
+    margin: 7px 0;
+}
+
+.footer-column a {
+    color: #999;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #f5b400;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-bottom: 18px;
+}
+
+.footer-logo span {
+    color: #f5b400;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer-logo small {
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #252525;
+
+    padding: 22px 10px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================================================
+   26. GENERAL MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        padding: 0 18px;
+    }
+
+    .header-inner {
+        min-height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+
+        gap: 16px;
+
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 3px;
+    }
+
+    .main-nav a {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+    .main-nav a::after {
+        left: 9px;
+        right: 9px;
+    }
+
+
+    /* Legacy header */
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   27. HOMEPAGE MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 470px;
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 37px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #cars {
+        padding: 55px 15px;
+    }
+
+    #cars > h2 {
+        font-size: 29px;
+    }
+
+    .car-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .car-card {
+        min-height: auto;
+    }
+
+    .car-image {
+        height: 220px;
+    }
+
+    .collection-transition {
+        padding: 60px 20px;
+    }
+
+    .collection-transition h2 {
+        font-size: 29px;
+    }
+
+    .home-contact-cta {
+        padding: 65px 20px;
+    }
+
+    .home-contact-cta h2 {
+        font-size: 29px;
+    }
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us {
+        padding: 60px 20px;
+    }
+
+    .why-heading h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   28. ABOUT MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-hero {
+        min-height: 320px;
+        padding: 50px 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-hero p:not(.about-label) {
+        font-size: 16px;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 29px;
+    }
+
+    .why-us {
+        padding: 60px 20px;
+    }
+
+    .why-us-heading h2 {
+        font-size: 29px;
+    }
+
+    .why-card {
+        width: 100%;
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   29. CONTACT MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .contact-hero {
+        min-height: 320px;
+        padding: 50px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-hero p:not(.contact-label) {
+        font-size: 16px;
+    }
+
+    .contact-options {
+        padding: 60px 20px;
+    }
+
+    .contact-options-heading h2 {
+        font-size: 29px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: auto;
+        padding: 28px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   30. CARS PAGE MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cars-page-hero {
+        min-height: 300px;
+        padding: 50px 20px;
+    }
+
+    .cars-page-hero h1 {
+        font-size: 36px;
+    }
+
+    .cars-page-hero p:not(.cars-label) {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   31. GENERIC VEHICLE MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .vehicle-details {
+        padding: 35px 15px;
+    }
+
+    .vehicle-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-details-image {
+        min-height: 260px;
+    }
+
+    .vehicle-details-info {
+        padding: 25px 20px;
+    }
+
+    .vehicle-specs {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vehicle-actions a {
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   32. SUBARU MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .subaru-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .subaru-hero h2 {
+        font-size: 34px;
+    }
+
+    .subaru-hero p:not(.vehicle-label) {
+        font-size: 15px;
+    }
+
+    .subaru-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .subaru-main-image {
+        height: 280px;
+    }
+
+    .subaru-information {
+        margin: 0 15px 35px;
+        padding: 15px;
+    }
+
+    .subaru-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .subaru-info-header h2 {
+        font-size: 24px;
+    }
+
+    .subaru-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .subaru-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .subaru-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .subaru-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   33. MAZDA CX-5 MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .mazda-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .mazda-hero h2 {
+        font-size: 34px;
+    }
+
+    .mazda-hero p {
+        font-size: 15px;
+    }
+
+    .mazda-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .mazda-main-image {
+        height: 280px;
+    }
+
+    .mazda-information {
+        padding: 0 15px;
+        margin-bottom: 35px;
+    }
+
+    .mazda-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .mazda-info-header h2 {
+        font-size: 24px;
+    }
+
+    .mazda-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .mazda-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mazda-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .mazda-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .mazda-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   34. SIENTA MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .sienta-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .sienta-hero h2 {
+        font-size: 34px;
+    }
+
+    .sienta-hero p {
+        font-size: 15px;
+    }
+
+    .sienta-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .sienta-main-image {
+        height: 280px;
+    }
+
+    .sienta-information {
+        padding: 0 15px;
+        margin-bottom: 35px;
+    }
+
+    .sienta-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .sienta-info-header h2 {
+        font-size: 24px;
+    }
+
+    .sienta-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .sienta-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sienta-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sienta-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .sienta-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   35. HILUX MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hilux-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .hilux-hero h2 {
+        font-size: 34px;
+    }
+
+    .hilux-hero p {
+        font-size: 15px;
+    }
+
+    .hilux-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .hilux-main-image {
+        height: 280px;
+    }
+
+    .hilux-information {
+        padding: 0 15px;
+        margin-bottom: 35px;
+    }
+
+    .hilux-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .hilux-info-header h2 {
+        font-size: 24px;
+    }
+
+    .hilux-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hilux-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hilux-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hilux-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .hilux-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   36. PRADO MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .prado-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .prado-hero h2 {
+        font-size: 34px;
+    }
+
+    .prado-hero p {
+        font-size: 15px;
+    }
+
+    .prado-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .prado-main-image {
+        height: 320px;
+    }
+
+    .prado-information {
+        padding: 0 15px;
+        margin-bottom: 35px;
+    }
+
+    .prado-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .prado-info-header h2 {
+        font-size: 24px;
+    }
+
+    .prado-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .prado-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prado-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .prado-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .prado-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   37. MAZDA CX-3 MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cx3-hero {
+        min-height: 240px;
+        padding: 40px 20px 25px;
+    }
+
+    .cx3-hero h2 {
+        font-size: 34px;
+    }
+
+    .cx3-hero p {
+        font-size: 15px;
+    }
+
+    .cx3-gallery {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .cx3-main-image {
+        height: 280px;
+    }
+
+    .cx3-information {
+        margin: 0 15px 35px;
+        padding: 15px;
+    }
+
+    .cx3-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .cx3-info-header h2 {
+        font-size: 24px;
+    }
+
+    .cx3-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .cx3-spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cx3-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cx3-actions {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .cx3-actions a {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   38. TABLET RESPONSIVE
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    .car-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-inner {
+        gap: 15px;
+    }
+
+    .main-nav a {
+        padding: 10px 9px;
+    }
+}
+
+
+/* =========================================================
+   39. SMALL PHONE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .about-hero h1,
+    .contact-hero h1,
+    .cars-page-hero h1 {
+        font-size: 32px;
+    }
+
+    .subaru-hero h2,
+    .mazda-hero h2,
+    .sienta-hero h2,
+    .hilux-hero h2,
+    .prado-hero h2,
+    .cx3-hero h2 {
+        font-size: 30px;
+    }
+
+    .car-image {
+        height: 200px;
+    }
+
+    .car-card h3 {
+        font-size: 20px;
+    }
+
+    .car-card h4 {
+        font-size: 20px;
+    }
+
+    .subaru-main-image,
+    .mazda-main-image,
+    .sienta-main-image,
+    .cx3-main-image {
+        height: 240px;
+    }
+
+    .hilux-main-image {
+        height: 240px;
+    }
+
+    .prado-main-image {
+        height: 270px;
+    }
+}
+
+
+/* =========================================================
+   40. ACCESSIBILITY / FOCUS
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #f5b400;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   END OF DRIVE N' DWELL SOLUTIONS STYLESHEET
+   ========================================================= */
+   /* =========================================================
+   FINAL TEXT ALIGNMENT FIX
+   HOME • CARS • ABOUT • CONTACT
+   ========================================================= */
+
+/* Homepage headings and introductory text */
+#cars {
+    text-align: center;
+}
+
+#cars > h2,
+#cars > p {
+    text-align: center;
+}
+
+#cars > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cars cards keep their own content aligned naturally */
+.car-card {
+    text-align: left;
+}
+
+
+/* About page */
+.about-hero,
+.about-section,
+.why-us {
+    text-align: center;
+}
+
+.about-hero-content,
+.about-section-content,
+.why-us-heading {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section p,
+.why-us-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Contact page */
+.contact-hero,
+.contact-options {
+    text-align: center;
+}
+
+.contact-hero-content,
+.contact-options-heading {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-options-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Cars page hero */
+.cars-page-hero {
+    text-align: center;
+}
+
+.cars-page-hero-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Homepage CTA */
+.home-contact-cta {
+    text-align: center;
+}
+
+.home-contact-cta-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Collection section */
+.collection-transition {
+    text-align: center;
+}
+
+.collection-transition p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Why section */
+.why-heading {
+    text-align: center;
+}
+
+.why-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* =========================================================
+   FINAL PROFESSIONAL ALIGNMENT
+   CARS • ABOUT • CONTACT
+   ========================================================= */
+
+
+/* =========================================================
+   CARS PAGE — OUR COLLECTION
+   ========================================================= */
+
+.cars-page-hero {
+    text-align: center;
+}
+
+.cars-page-hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cars-page-hero-content .hero-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.cars-page-hero-content h1 {
+    text-align: center;
+    margin: 0 auto 16px;
+}
+
+.cars-page-hero-content p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — READY TO FIND YOUR CAR?
+   ========================================================= */
+
+.about-cta {
+    text-align: center;
+}
+
+.about-cta-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-cta-content .hero-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.about-cta-content h2 {
+    text-align: center;
+    margin: 0 auto 16px;
+}
+
+.about-cta-content p {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.about-cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — WHY CHOOSE US
+   ========================================================= */
+
+.why-us {
+    text-align: center;
+}
+
+.why-us-heading {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.why-us-heading h2 {
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.why-us-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    
+    align-items: stretch;
+}
+
+.why-card {
+    width: 100%;
+    min-height: 240px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    padding: 35px 25px;
+    box-sizing: border-box;
+}
+
+.why-card h3 {
+    text-align: center;
+    margin: 15px 0 10px;
+}
+
+.why-card p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+
+/* =========================================================
+   CONTACT PAGE — LOOKING FOR A VEHICLE?
+   ========================================================= */
+
+.contact-cta {
+    text-align: center;
+}
+
+.contact-cta-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-cta-content .hero-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.contact-cta-content h2 {
+    text-align: center;
+    margin: 0 auto 16px;
+}
+
+.contact-cta-content p {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.contact-cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .why-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .why-card {
+        min-height: 210px;
+    }
+
+    .about-cta-buttons,
+    .contact-cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .about-cta-buttons .button,
+    .contact-cta-buttons .button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+/* =========================================================
+   CARS PAGE — FINAL SECTION ALIGNMENT
+   ========================================================= */
+
+/* OUR COLLECTION / FEATURED VEHICLES */
+
+.cars-page-hero {
+    text-align: center;
+}
+
+.cars-page-hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cars-page-hero-content h1,
+.cars-page-hero-content h2,
+.cars-page-hero-content p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars-page-hero-content p {
+    max-width: 700px;
+}
+
+
+/* READY TO DRIVE? / FIND YOUR NEXT VEHICLE */
+
+.cars-contact-cta {
+    text-align: center;
+}
+
+.cars-contact-cta-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cars-contact-cta-content h2 {
+    text-align: center;
+    margin: 0 auto 16px;
+}
+
+.cars-contact-cta-content p {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.cars-contact-cta-content .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+/* Make sure the CTA itself is centered */
+
+.cars-contact-cta .button,
+.cars-contact-cta a {
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .cars-page-hero-content,
+    .cars-contact-cta-content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cars-page-hero-content p,
+    .cars-contact-cta-content p {
+        max-width: 100%;
+    }
+}
+/* =========================================================
+   CARS PAGE — EXACT TEXT ALIGNMENT
+   ========================================================= */
+
+/* OUR COLLECTION / FEATURED VEHICLES */
+
+.cars-page-heading {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cars-page-heading .cars-page-section-label {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars-page-heading h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars-page-heading > p:last-child {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* =========================================================
+   READY TO DRIVE? / FIND YOUR NEXT VEHICLE
+   ========================================================= */
+
+.cars-page-cta {
+    text-align: center;
+}
+
+.cars-page-cta-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cars-page-cta-content .cars-page-label {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars-page-cta-content h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars-page-cta-content > p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.cars-page-cta-content .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cars-page-heading,
+    .cars-page-cta-content {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cars-page-heading > p:last-child,
+    .cars-page-cta-content > p {
+        max-width: 100%;
+    }
+}
+/* =========================================================
+   HOME PAGE — WHY CHOOSE US
+   4 CARDS IN A PROFESSIONAL 2 × 2 GRID
+   ========================================================= */
+
+.why-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+.why-card {
+    width: 100%;
+    min-height: 240px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 35px 30px;
+}
+
+.why-card h3 {
+    text-align: center;
+    margin: 15px 0 10px;
+}
+
+.why-card p {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MOBILE — ONE CARD PER ROW
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .why-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .why-card {
+        min-height: 210px;
+    }
+}
+/* =========================================================
+   VEHICLE SEARCH & FILTERS
+   DRIVE N' DWELL SOLUTIONS
+   ========================================================= */
+
+.vehicle-filters {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 45px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Search */
+
+.vehicle-search {
+    width: 100%;
+}
+
+.vehicle-search input {
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    background: #1c1c1c;
+    color: #fff;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+.vehicle-search input::placeholder {
+    color: #999;
+}
+
+.vehicle-search input:focus {
+    border-color: #f5b400;
+}
+
+
+/* Filter dropdowns */
+
+.filter-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.filter-group select {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    background: #1c1c1c;
+    color: #fff;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    border-color: #f5b400;
+}
+
+.filter-group select:hover {
+    border-color: #f5b400;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .vehicle-filters {
+        width: 92%;
+        padding: 18px;
+        margin-bottom: 30px;
+    }
+
+    .filter-group {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .vehicle-search input {
+        height: 50px;
+    }
+
+    .filter-group select {
+        height: 46px;
+    }
+}
+/* =========================================================
+   VEHICLE STATUS BADGES
+   DRIVE N' DWELL SOLUTIONS
+   ========================================================= */
+
+.vehicle-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Available */
+
+.vehicle-status.available {
+    background: #f5b400;
+    color: #111;
+}
+
+
+/* New Arrival */
+
+.vehicle-status.new-arrival {
+    background: #111;
+    color: #f5b400;
+
+    border: 1px solid #f5b400;
+}
+
+
+/* Make sure the card can contain the badge */
+
+.car-card {
+    position: relative;
+}
+/* =========================================================
+   HOW IT WORKS
+   DRIVE N' DWELL SOLUTIONS
+   ========================================================= */
+
+.how-it-works {
+    padding: 90px 20px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+
+/* Heading */
+
+.how-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.how-label {
+    margin: 0 0 12px;
+
+    color: #b18400;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.how-heading h2 {
+    margin: 0 0 15px;
+
+    color: #111;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.how-heading > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Four steps */
+
+.how-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* Individual cards */
+
+.how-card {
+    position: relative;
+
+    min-height: 245px;
+    padding: 35px 25px;
+
+    box-sizing: border-box;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.how-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #f5b400;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Number */
+
+.how-number {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+    color: #f5b400;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Card text */
+
+.how-card h3 {
+    margin: 0 0 12px;
+
+    color: #111;
+
+    font-size: 19px;
+}
+
+.how-card p {
+    max-width: 240px;
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .how-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .how-it-works {
+        padding: 70px 18px;
+    }
+
+    .how-heading {
+        margin-bottom: 40px;
+    }
+
+    .how-heading h2 {
+        font-size: 30px;
+    }
+
+    .how-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .how-card {
+        min-height: auto;
+        padding: 30px 22px;
+    }
+
+}
+/* =========================================================
+   CUSTOMER TESTIMONIALS — SMART PREMIUM LAYOUT
+   ========================================================= */
+
+.testimonials {
+    position: relative;
+    padding: 100px 20px;
+    background: #f7f7f7;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonials-heading {
+    max-width: 750px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.testimonials-label {
+    margin: 0 0 12px;
+    color: #b18400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.testimonials-heading h2 {
+    margin: 0 0 18px;
+    color: #111;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.testimonials-heading > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Main testimonial layout */
+
+.testimonials-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Cards */
+
+.testimonial-card {
+    position: relative;
+
+    padding: 34px 28px;
+
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: #f5b400;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Featured middle card */
+
+.testimonial-card:nth-child(2) {
+    padding: 45px 32px;
+
+    background: #111;
+    border: 1px solid #f5b400;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+
+    transform: translateY(-10px);
+}
+
+.testimonial-card:nth-child(2):hover {
+    transform: translateY(-15px);
+}
+
+/* Featured card text */
+
+.testimonial-card:nth-child(2) .testimonial-text {
+    color: #ccc;
+}
+
+.testimonial-card:nth-child(2) .testimonial-customer {
+    border-top-color: #333;
+}
+
+.testimonial-card:nth-child(2) .testimonial-customer h3 {
+    color: #fff;
+}
+
+.testimonial-card:nth-child(2) .testimonial-customer span {
+    color: #999;
+}
+
+/* Quote */
+
+.testimonial-card::before {
+    content: "“";
+
+    position: absolute;
+    top: 10px;
+    right: 23px;
+
+    color: #f5b400;
+
+    font-family: Georgia, serif;
+    font-size: 70px;
+    line-height: 1;
+
+    opacity: 0.18;
+}
+
+/* Stars */
+
+.testimonial-stars {
+    margin-bottom: 20px;
+
+    color: #f5b400;
+
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+/* Review text */
+
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+
+    min-height: 95px;
+    margin: 0 0 28px;
+
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Customer */
+
+.testimonial-customer {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+.customer-initial {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+    color: #f5b400;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.testimonial-card:nth-child(2) .customer-initial {
+    background: #f5b400;
+    color: #111;
+}
+
+.testimonial-customer h3 {
+    margin: 0 0 4px;
+
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.testimonial-customer span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .testimonial-card:nth-child(2) {
+        order: -1;
+        transform: none;
+    }
+
+    .testimonial-card:nth-child(2):hover {
+        transform: translateY(-6px);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .testimonials {
+        padding: 75px 18px;
+    }
+
+    .testimonials-heading {
+        margin-bottom: 45px;
+    }
+
+    .testimonials-heading h2 {
+        font-size: 30px;
+    }
+
+    .testimonials-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .testimonial-card,
+    .testimonial-card:nth-child(2) {
+        padding: 32px 24px;
+    }
+
+    .testimonial-text {
+        min-height: auto;
+    }
+}
+/* =========================================================
+   VEHICLE CARD ACTION BUTTONS
+   ========================================================= */
+
+.car-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.car-actions .car-button,
+.car-actions .whatsapp-enquiry {
+    width: 100%;
+    min-height: 46px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* View Details */
+
+.car-actions .car-button {
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.car-actions .car-button:hover {
+    background: #f5b400;
+    color: #111;
+    border-color: #f5b400;
+    transform: translateY(-2px);
+}
+
+/* WhatsApp */
+
+.car-actions .whatsapp-enquiry {
+    background: #fff;
+    color: #111;
+    border: 1px solid #d8d8d8;
+}
+
+.car-actions .whatsapp-enquiry:hover {
+    background: #f5b400;
+    color: #111;
+    border-color: #f5b400;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .car-actions {
+        gap: 8px;
+    }
+
+    .car-actions .car-button,
+    .car-actions .whatsapp-enquiry {
+        min-height: 48px;
+    }
+}
+/* =========================================================
+   FLOATING WHATSAPP BUTTON
+   ========================================================= */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    background: #111;
+    color: #fff;
+
+    border: 1px solid #f5b400;
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    background: #f5b400;
+    color: #111;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+.floating-whatsapp-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.floating-whatsapp-text {
+    white-space: nowrap;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+
+        width: 52px;
+        height: 52px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 50%;
+    }
+
+    .floating-whatsapp-icon {
+        font-size: 20px;
+    }
+
+    .floating-whatsapp-text {
+        display: none;
+    }
+}
+/* =========================================
+   MAZDA 3 VEHICLE PAGE
+   ========================================= */
+
+.vehicle-hero {
+    position: relative;
+    padding: 90px 20px 80px;
+    background: #111;
+    text-align: center;
+    overflow: hidden;
+}
+
+.vehicle-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -300px;
+    right: -180px;
+    background: rgba(245, 180, 0, 0.07);
+    border-radius: 50%;
+}
+
+.vehicle-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.vehicle-label {
+    margin: 0 0 15px;
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.vehicle-hero h1 {
+    margin: 0 0 15px;
+    color: #fff;
+    font-size: 46px;
+    line-height: 1.2;
+}
+
+.vehicle-subtitle {
+    margin: 0;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.vehicle-price {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 24px;
+    background: #f5b400;
+    color: #111;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* Gallery */
+
+.vehicle-gallery-section {
+    padding: 70px 20px;
+    background: #f7f7f7;
+}
+
+.vehicle-gallery {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.main-vehicle-image {
+    width: 100%;
+    height: 560px;
+    background: #111;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.main-vehicle-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #111;
+}
+
+.vehicle-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.vehicle-thumbnails img {
+    width: 100%;
+    height: 90px;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.vehicle-thumbnails img:hover {
+    border-color: #f5b400;
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* Information */
+
+.vehicle-info-section {
+    padding: 90px 20px;
+    background: #fff;
+}
+
+.vehicle-info-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.vehicle-overview {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.vehicle-section-label {
+    margin: 0 0 12px;
+    color: #b18400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.vehicle-overview h2,
+.vehicle-features h2,
+.vehicle-contact h2 {
+    margin: 0 0 18px;
+    color: #111;
+    font-size: 34px;
+}
+
+.vehicle-overview > p:last-child {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* Specifications */
+
+.vehicle-specifications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 80px;
+}
+
+.vehicle-spec-card {
+    padding: 28px 25px;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    text-align: center;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.vehicle-spec-card:hover {
+    transform: translateY(-4px);
+    border-color: #f5b400;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-spec-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #888;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vehicle-spec-card strong {
+    color: #111;
+    font-size: 18px;
+}
+
+
+/* Features */
+
+.vehicle-features {
+    padding: 55px;
+    background: #111;
+    border-radius: 14px;
+    margin-bottom: 70px;
+}
+
+.vehicle-features .vehicle-section-label {
+    color: #f5b400;
+}
+
+.vehicle-features h2 {
+    color: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.features-grid div {
+    padding: 17px 18px;
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 7px;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.features-grid div:hover {
+    border-color: #f5b400;
+    transform: translateY(-3px);
+}
+
+
+/* Contact */
+
+.vehicle-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 45px;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+}
+
+.vehicle-contact h2 {
+    margin-bottom: 10px;
+}
+
+.vehicle-contact p:last-child {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+.vehicle-whatsapp {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    min-height: 52px;
+    padding: 0 25px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.vehicle-whatsapp:hover {
+    background: #f5b400;
+    color: #111;
+    border-color: #f5b400;
+    transform: translateY(-3px);
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .vehicle-hero h1 {
+        font-size: 38px;
+    }
+
+    .main-vehicle-image {
+        height: 450px;
+    }
+
+    .vehicle-thumbnails {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .vehicle-specifications {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vehicle-contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .vehicle-hero {
+        padding: 65px 18px;
+    }
+
+    .vehicle-hero h1 {
+        font-size: 28px;
+    }
+
+    .vehicle-subtitle {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .vehicle-price {
+        font-size: 20px;
+    }
+
+    .vehicle-gallery-section {
+        padding: 45px 15px;
+    }
+
+    .main-vehicle-image {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .vehicle-thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7px;
+    }
+
+    .vehicle-thumbnails img {
+        height: 65px;
+    }
+
+    .vehicle-info-section {
+        padding: 65px 18px;
+    }
+
+    .vehicle-overview h2,
+    .vehicle-features h2,
+    .vehicle-contact h2 {
+        font-size: 27px;
+    }
+
+    .vehicle-specifications {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 55px;
+    }
+
+    .vehicle-features {
+        padding: 32px 20px;
+        border-radius: 10px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-contact {
+        padding: 32px 22px;
+    }
+
+    .vehicle-whatsapp {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+`css
+/* ================================
+   WHY DRIVE N' DWELL - PREMIUM
+================================ */
+
+.why-drive-n-dwell {
+    position: relative;
+    padding: 90px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #f8f8f8 0%,
+            #ffffff 50%,
+            #f4f1e8 100%
+        );
+    border-top: 1px solid rgba(245, 180, 0, 0.18);
+    border-bottom: 1px solid rgba(245, 180, 0, 0.18);
+}
+
+.why-drive-n-dwell .why-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.why-drive-n-dwell .why-label {
+    margin-bottom: 10px;
+    color: #b88600;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.why-drive-n-dwell .why-heading h2 {
+    margin: 0 0 15px;
+    color: #111;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.why-drive-n-dwell .why-heading > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.why-drive-n-dwell .why-container {
+    max-width: 1050px;
+    gap: 25px;
+}
+
+.why-drive-n-dwell .why-card {
+    position: relative;
+    min-height: 245px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.why-drive-n-dwell .why-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f5b400;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.why-drive-n-dwell .why-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245, 180, 0, 0.45);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+}
+
+.why-drive-n-dwell .why-card:hover::before {
+    transform: scaleX(1);
+}
+
+.why-drive-n-dwell .why-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    background: #111;
+    color: #f5b400;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.why-drive-n-dwell .why-card h3 {
+    margin: 0 0 12px;
+    color: #111;
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.why-drive-n-dwell .why-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .why-drive-n-dwell {
+        padding: 70px 18px;
+    }
+
+    .why-drive-n-dwell .why-heading {
+        margin-bottom: 40px;
+    }
+
+    .why-drive-n-dwell .why-heading h2 {
+        font-size: 30px;
+    }
+
+    .why-drive-n-dwell .why-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .why-drive-n-dwell .why-container {
+        gap: 18px;
+    }
+
+    .why-drive-n-dwell .why-card {
+        min-height: 210px;
+        padding: 32px 24px;
+    }
+}/* =========================================
+   ELEGANT CUSTOMER TESTIMONIAL SECTION
+========================================= */
+
+.testimonials {
+    position: relative;
+    padding: 95px 20px 105px;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(245, 180, 0, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(190, 150, 50, 0.12),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #f1eee5 0%,
+            #faf9f5 45%,
+            #eee9dc 100%
+        );
+    color: #111;
+    overflow: hidden;
+}
+
+/* Soft decorative glow */
+.testimonials::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -120px;
+    right: -80px;
+    background: rgba(245, 180, 0, 0.10);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.testimonials::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    bottom: -100px;
+    left: -70px;
+    background: rgba(210, 180, 100, 0.10);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+/* Heading */
+.testimonials h2,
+.testimonials .section-title {
+    position: relative;
+    z-index: 2;
+    color: #111;
+}
+
+/* Supporting text */
+.testimonials > p {
+    position: relative;
+    z-index: 2;
+    color: #666;
+}
+
+/* Testimonial cards */
+.testimonials .testimonial-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(180, 140, 30, 0.20);
+    border-radius: 16px;
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.testimonials .testimonial-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 180, 0, 0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Testimonial text */
+.testimonials .testimonial-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Customer name */
+.testimonials .testimonial-card h3,
+.testimonials .testimonial-card h4 {
+    color: #111;
+}
+
+/* Gold stars */
+.testimonials .stars {
+    color: #f5b400;
+}
+/* =========================================
+   ELEGANT WHY CHOOSE US
+========================================= */
+
+.why-drive-n-dwell {
+    position: relative;
+    padding: 95px 20px;
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(245, 180, 0, 0.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(180, 150, 70, 0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #f1eee5 0%,
+            #faf9f5 48%,
+            #eee9dc 100%
+        );
+    overflow: hidden;
+}
+
+/* =========================================
+   ELEGANT HOW IT WORKS
+========================================= */
+
+.how-it-works {
+    position: relative;
+    padding: 95px 20px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(245, 180, 0, 0.13),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(180, 150, 70, 0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #eee9dc 0%,
+            #faf9f5 50%,
+            #f1eee5 100%
+        );
+    overflow: hidden;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.why-drive-n-dwell .why-heading,
+.how-it-works > .section-heading {
+    position: relative;
+    z-index: 2;
+}
+
+/* Gold labels */
+.why-drive-n-dwell .why-label,
+.how-it-works .section-label {
+    color: #b88600;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   HOW IT WORKS CARDS
+========================================= */
+
+.how-it-works .step-card,
+.how-it-works .how-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(180, 140, 30, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.how-it-works .step-card:hover,
+.how-it-works .how-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245, 180, 0, 0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+}
+
+/* =========================================
+   WHY CHOOSE US CARDS
+========================================= */
+
+.why-drive-n-dwell .why-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(180, 140, 30, 0.18);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+}
+
+.why-drive-n-dwell .why-card:hover {
+    border-color: rgba(245, 180, 0, 0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .why-drive-n-dwell,
+    .how-it-works {
+        padding: 70px 18px;
+    }
+}
+/* =========================================
+   ABOUT PAGE - PREMIUM SHOWROOM STYLE
+========================================= */
+
+.about-hero {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(17, 17, 17, 0.96),
+            rgba(45, 39, 24, 0.92)
+        );
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: -180px;
+    background: rgba(245, 180, 0, 0.13);
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -140px;
+    bottom: -160px;
+    background: rgba(245, 180, 0, 0.08);
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.about-label {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    color: #fff;
+    font-size: 46px;
+    line-height: 1.15;
+    margin: 0 auto 20px;
+}
+
+.about-hero-content > p:last-child {
+    color: #d8d8d8;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   WHO WE ARE
+========================================= */
+
+.about-section {
+    position: relative;
+    padding: 100px 20px;
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(245, 180, 0, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #f0ece2 0%,
+            #faf9f5 50%,
+            #ebe5d7 100%
+        );
+}
+
+.about-section-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 55px;
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid rgba(180, 140, 30, 0.20);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(8px);
+}
+
+.about-section-label {
+    color: #b88600;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-section-content h2,
+.why-us-heading h2 {
+    color: #111;
+    font-size: 34px;
+    margin: 10px 0 20px;
+}
+
+.about-section-content p:not(.about-section-label) {
+    color: #5f5f5f;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   WHY US
+========================================= */
+
+.why-us {
+    position: relative;
+    padding: 100px 20px;
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(245, 180, 0, 0.13),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #faf9f5 0%,
+            #eee9dc 100%
+        );
+}
+
+.why-us-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.why-us-heading > p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+.about-page-cards {
+    max-width: 1000px;
+}
+
+.about-page-cards .why-card {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(180, 140, 30, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+}
+
+.about-page-cards .why-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245, 180, 0, 0.55);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.11);
+}
+
+.about-page-cards .why-icon {
+    background: #111;
+    color: #f5b400;
+}
+
+
+/* =========================================
+   ABOUT CTA
+========================================= */
+
+.about-cta {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(245, 180, 0, 0.16),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #181818,
+            #252219
+        );
+    overflow: hidden;
+}
+
+.about-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-cta h2 {
+    color: #fff;
+    font-size: 38px;
+    margin: 10px 0 18px;
+}
+
+.about-cta p:not(.about-section-label) {
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+.about-cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .about-hero {
+        min-height: 360px;
+        padding: 60px 18px;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-section,
+    .why-us,
+    .about-cta {
+        padding: 70px 18px;
+    }
+
+    .about-section-content {
+        padding: 35px 25px;
+    }
+
+    .about-section-content h2,
+    .why-us-heading h2 {
+        font-size: 28px;
+    }
+
+    .about-cta h2 {
+        font-size: 30px;
+    }
+}
